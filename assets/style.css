@@ -21,6 +21,38 @@
 img {
   max-width: 100%;
 }
+
+/* Animation */
+@keyframes banner-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes banner-player-animation {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-20px);
+  }
+  5% {
+    opacity: 0.7;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 /* Custom style */
 .banner {
   display: flex;
@@ -29,6 +61,7 @@ img {
   color: #fff;
   border-radius: 15px;
   margin: 50px auto;
+  animation: banner-animation 0.7s ease-out forwards;
 }
 .banner-left {
   padding: 45px;
@@ -47,6 +80,7 @@ img {
 
 .banner-right img {
   display: block;
+  animation: banner-player-animation 1s ease-in infinite;
 }
 
 /* upcoming-matches */
